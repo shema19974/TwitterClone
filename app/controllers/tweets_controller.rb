@@ -23,6 +23,10 @@ class TweetsController < ApplicationController
 
   # POST /tweets
   # POST /tweets.json
+
+  def confirm
+    @tweet = Tweet.new(tweet_params)
+  end
   def create
     @tweet = Tweet.new(tweet_params)
 
